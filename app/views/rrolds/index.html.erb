@@ -25,7 +25,7 @@
     <td class="text-center"><%= rrold.enumber %></td>
     <td><%= link_to rrold.name, rrold.url %></td>
     <td class="text-center"><%= rrold.size %></td>
-    <td class="text-center"><%= rrold.created_at.to_formatted_s(:short)  %></td>
+    <td class="text-center"><%= rrold.created_at.to_date()  %></td>
     <td class="edit-link text-center"><%= link_to(edit_rrold_path(rrold)) do %> 
       <i class="icon-pencil"></i>
       <% end %>

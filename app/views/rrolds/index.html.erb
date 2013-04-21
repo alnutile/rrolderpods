@@ -1,0 +1,36 @@
+
+
+<p class="hero-unit intro span8">
+  There is a Ruby Rogues Parley Google Groups thread titled "Is there a way to download old Rogues episodes as podcasts?"
+  I noticed this too on my Android phone. (<i>I was actually happy
+   to realize there were 60 more to listen to!</i>). But then I thought
+  heck I could make a feed in rails to help learn rails. So here is a go at it.
+  </br><i>The code "quality" of this site in no way should reflect the quality of the RR Podcast! <i class="icon-thumbs-up"></i></i>
+</p>
+
+
+<table class="table-hover table-bordered ">
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>Title</th>
+      <th>Size MB</th>
+      <th>Date</th>
+      <th>Edit</th>
+    </tr>
+  </thead>
+
+<% @rrolds.each do |rrold| %>
+  <tr>
+    <td class="text-center"><%= rrold.enumber %></td>
+    <td><%= link_to rrold.name, rrold.url %></td>
+    <td class="text-center"><%= rrold.size %></td>
+    <td class="text-center"><%= rrold.created_at.to_formatted_s(:short)  %></td>
+    <td class="edit-link text-center"><%= link_to(edit_rrold_path(rrold)) do %> 
+      <i class="icon-pencil"></i>
+      <% end %>
+    </td>
+  </tr>
+<% end %>
+</table>
+

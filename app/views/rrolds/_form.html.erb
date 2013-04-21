@@ -1,0 +1,40 @@
+<%= form_for(@rrold) do |f| %>
+  <% if @rrold.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@rrold.errors.count, "error") %> prohibited this rrold from being saved:</h2>
+
+      <ul>
+      <% @rrold.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <div class="field">
+    <%= f.label :enumber %><br />
+    <%= f.text_field :enumber %>
+  </div>
+  <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :url %><br />
+    <%= f.text_field :url %>
+  </div>
+  <div class="field">
+    <%= f.label :description %><br />
+    <%= f.text_area :description %>
+  </div>
+  <div class="field">
+    <%= f.label :size %><br />
+    <%= f.text_field :size %>
+  </div>
+  <div class="field">
+    <%= f.label :created_at %><br />
+    <%= f.date_select :created_at %>
+  </div>  
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

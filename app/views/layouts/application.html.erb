@@ -1,0 +1,41 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Ruby Rogues Episodes 1 thru 60</title>
+	<%= auto_discovery_link_tag :atom, "/feed" %>
+	<%= auto_discovery_link_tag :rss, "/feed.rss" %>
+
+	<%= stylesheet_link_tag    "application", :media => "all" %>
+	<%= javascript_include_tag "application" %>
+	<%= csrf_meta_tags %>
+</head>
+<body class="rr-feed">
+<header class="navbar navbar-fixed-top navbar-inverse">
+  <div class="navbar-inner">
+    <div class="container">
+      <span id="brand-bar" class="brand"><span id="brand-info">Ruby Rogues Episodes 1 thru 60</span></span>
+      <div id="menu-top-items" class="nav-collapse collapse">
+        <ul id="main-menu" class="nav">
+            <li><%= link_to "Home", root_path %></li>
+            <li><%= link_to "Feed", feed_path %></li>
+        </ul>
+      </div>  
+    </div>
+  </div>
+</header>
+
+
+<div class="container main">
+	<%= yield %>
+	<footer class="footer">
+	  <nav>
+	    <ul class="nav">
+	      <li><%= link_to "Full Episodes Guide",   'http://rubyrogues.com/episode-guide/' %></li>
+	      <li><a href="http://alfrednutile.inf">Alfred Nutile rails/ruby newbie</a></li>
+	    </ul>
+	  </nav>
+	</footer>
+</div>
+</body>
+</html>

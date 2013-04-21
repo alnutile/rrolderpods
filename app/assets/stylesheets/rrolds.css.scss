@@ -1,0 +1,76 @@
+// Place all the styles related to the Rrolds controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+@import "bootstrap";
+
+
+body {
+ background-image: asset-url('gray_jean.png', image);
+}
+
+.container.main {
+	margin-top: 20px;
+	background-color: white;
+}
+
+p.hero-unit {
+	margin-left: 99px;
+}
+
+table {
+	margin: auto;
+	background-color: white;
+}
+
+thead {
+	background-color: #eeeeee;
+}
+
+td.edit-link a:hover {
+	background-color: #eeeeee;
+}
+
+td:nth-child(3), td:nth-child(1), td:nth-child(5){
+	text-align: center;
+}
+
+
+.rr-feed td {
+font-size: 16px;
+line-height: 38px;
+}
+
+.rr-feed p {
+	margin-top: 30px;
+	font-size: 16px;
+	line-height: 30px;	
+}
+
+footer {
+  margin-top: 45px;
+  padding-top: 5px;
+  border-top: 1px solid #eaeaea;
+  color: $grayLight;
+  a {
+    color: #555;
+    &:hover { 
+      color: #222;
+    }
+  }  
+  small { 
+    float: left; 
+  }
+  ul {
+    float: right;
+    list-style: none;
+    li {
+      float: left;
+      margin-left: 10px;
+    }
+    li:nth-child(1) {
+    	border-right: 1px solid #333;
+    	padding-right: 10px;
+    }
+  }
+}

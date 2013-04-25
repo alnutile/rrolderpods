@@ -13,14 +13,14 @@ atom_feed({
     image.height "104"
   end
 
-  feed.itunes :author, "Ruby Rogues"
-  feed.itunes :subtitle, "All the podcasts under 61"
-  feed.itunes :summary, "Some players do not show the older podcasts so here they are"
-  feed.itunes :keywords, "Ruby Rogues, ruby, rails"
-  feed.itunes :image, "#{root_url}#{image_path('feedimage.jpg')}"
-  feed.itunes :author, "Ruby Rogues Episodes 1 thru 60"
-  feed.itunes :author, "Ruby Rogues Episodes 1 thru 60"
-  feed.itunes :explicit, "no"
+  # feed.itunes :author, "Ruby Rogues"
+  # feed.itunes :subtitle, "All the podcasts under 61"
+  # feed.itunes :summary, "Some players do not show the older podcasts so here they are"
+  # feed.itunes :keywords, "Ruby Rogues, ruby, rails"
+  # feed.itunes :image, "#{root_url}#{image_path('feedimage.jpg')}"
+  # feed.itunes :author, "Ruby Rogues Episodes 1 thru 60"
+  # feed.itunes :author, "Ruby Rogues Episodes 1 thru 60"
+  # feed.itunes :explicit, "no"
 
 
 

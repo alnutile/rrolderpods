@@ -1,4 +1,8 @@
-atom_feed :language => 'en-US' do |feed|
+atom_feed({
+  'language' => 'en-US',
+  'xmlns:app' => 'http://www.w3.org/2007/app',
+  'xmlns:openSearch' => 'http://a9.com/-/spec/opensearch/1.1/'}
+  ) do |feed|
   feed.title "Ruby Rogues Episodes 1 thru 60"
   feed.updated Time.now
 

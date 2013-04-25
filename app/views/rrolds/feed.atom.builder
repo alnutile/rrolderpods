@@ -8,7 +8,9 @@ atom_feed :language => 'en-US' do |feed|
     feed.entry( item, :url => item.url ) do |entry|
       entry.title item.name
       entry.content item.url
-      entry.author 'Ruby Rogues'
+      entry.author do |author|
+          author.name("Ruby Rogues")
+      end
       # entry.content?
       # the strftime is needed to work with Google Reader.
       entry.updated(item.created_at.strftime("%Y-%m-%dT%H:%M:%SZ"))

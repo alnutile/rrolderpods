@@ -12,13 +12,13 @@ atom_feed({
     feed.entry( item, :url => item.url ) do |entry|
       entry.title item.name
       entry.content item.url
-      entry.tag(item.created_at.strftime("%Y-%m-%dT%H:%M:%SZ"))
+      # entry.tag(item.created_at.strftime("%Y-%m-%dT%H:%M:%SZ"))
       entry.author do |author|
           author.name("Ruby Rogues")
       end
       # entry.content?
       # the strftime is needed to work with Google Reader.
-      # entry.updated(item.created_at.strftime("%Y-%m-%dT%H:%M:%SZ"))
+      entry.updated(item.created_at.strftime("%Y-%m-%dT%H:%M:%SZ"))
     end
   end
 end

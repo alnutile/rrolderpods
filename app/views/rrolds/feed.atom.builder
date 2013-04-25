@@ -31,13 +31,13 @@ atom_feed({
       entry.title item.name
       entry.content item.url
       # entry.tag(item.created_at.strftime("%Y-%m-%dT%H:%M:%SZ"))
-      entry.author do |author|
-          author.name("Ruby Rogues")
-      end
+      # entry.author do |author|
+      #    author.name("Ruby Rogues")
+      # end
 
-      entry.media :content, :url => "#{item.url}", :type => "audio/mpeg"
-      entry.enclosure :url => "#{item.url}", :type => "audio/mpeg"
-      # entry.content?
+      # entry.media :content, :url => "#{item.url}", :type => "audio/mpeg"
+      # entry.enclosure :url => "#{item.url}", :type => "audio/mpeg"
+      ## entry.content?
       # the strftime is needed to work with Google Reader.
       entry.updated(item.created_at.strftime("%Y-%m-%dT%H:%M:%SZ"))
     end
